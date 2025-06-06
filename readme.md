@@ -17,19 +17,19 @@ Atomic Engineering is a methodology for building user interfaces by applying the
 # 12 Factor App 
 The Twelve-Factor App is a methodology for building modern, scalable, and maintainable software-as-a-service (SaaS) applications. It is a set of twelve best practices designed to create a clean contract between an application and the operating system it runs on, enabling portability and resilience.Following are the 12-factors explained : 
 
-+ Codebase : There should be one codebase tracked in version control for each application, but it can have many deploys
-+ Dependencies : An application must explicitly declare and isolate its dependencies. It should not rely on system-wide packages. 
-+ Config: Configuration (like database credentials, API keys, or deployment-specific settings) should be kept separate from the code. Using environment variables is the recommended approach, which prevents secrets from being checked into version control.
-+ Backing Services : Any external service the app consumes (like a database, message queue, or cache) should be interchangeable. 
-+ Build , Release , Run : <br>
++ <b>Codebase</b> : There should be one codebase tracked in version control for each application, but it can have many deploys
++ <b>Dependencies</b> : An application must explicitly declare and isolate its dependencies. It should not rely on system-wide packages. 
++ <b>Config</b>: Configuration (like database credentials, API keys, or deployment-specific settings) should be kept separate from the code. Using environment variables is the recommended approach, which prevents secrets from being checked into version control.
++ <b>Backing Services</b> : Any external service the app consumes (like a database, message queue, or cache) should be interchangeable. 
++ <b>Build , Release , Run</b> : <br>
 Build: Transforms code into an executable bundle (a "build").
 Release: Combines the build with the environment's config.
 Run: Executes the release as a running process.
 This separation makes rollbacks easy and ensures a consistent deployment process.
-+ Processes : The application should not store any persistent data in its own memory or on disk. 
-+ Port Binding : The application should be self-contained and expose its functionality (e.g., an HTTP service) by binding to a port. It should not depend on a specific webserver being injected into its runtime.
-+ Concurrency : Instead of making a single process larger (vertical scaling), you achieve concurrency by running multiple instances of the application's processes (horizontal scaling). 
-+ Disposability : Processes should be "disposable"—they can be started or stopped at a moment's notice. This allows for rapid scaling, deployments, and fast recovery from crashes.
-+ Dev/Prod Parity : Minimize the differences in tools, technologies, and backing services between environments. 
-+ LOgs : The application should not be concerned with storing or routing its own log files. Instead, it should write its log output to stdout. 
-+ Admin Processes : ny administrative tasks, such as database migrations or running a REPL console, should be executed as a separate, one-off process in the same environment as the application, using the same codebase and config.
++ <b>Processes</b> : The application should not store any persistent data in its own memory or on disk. 
++ <b>Port Binding</b> : The application should be self-contained and expose its functionality (e.g., an HTTP service) by binding to a port. It should not depend on a specific webserver being injected into its runtime.
++ <b>Concurrency</b> : Instead of making a single process larger (vertical scaling), you achieve concurrency by running multiple instances of the application's processes (horizontal scaling). 
++ <b>Disposability</b> : Processes should be "disposable"—they can be started or stopped at a moment's notice. This allows for rapid scaling, deployments, and fast recovery from crashes.
++ <b>Dev/Prod Parity</b> : Minimize the differences in tools, technologies, and backing services between environments. 
++ <b>Logs</b> : The application should not be concerned with storing or routing its own log files. Instead, it should write its log output to stdout. 
++ <b>Admin Processes </b>: ny administrative tasks, such as database migrations or running a REPL console, should be executed as a separate, one-off process in the same environment as the application, using the same codebase and config.
