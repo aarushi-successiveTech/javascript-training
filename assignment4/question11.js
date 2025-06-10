@@ -1,3 +1,5 @@
+// Write a program to sort an array (bubble sort)
+
 const arr = [2,3,1,4,6,5];
 
 for(let i = 0 ; i < arr.length ; i++){
