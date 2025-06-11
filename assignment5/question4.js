@@ -11,7 +11,23 @@ const user = {
     date : new Date(),
 }
 
-const newUser = structuredClone(user) ; 
+function deepClone(input){
+    if(input === null || typeof(input) !== 'object'){
+        return input;
+    }
+
+    const newInput = Array.isArray(input) ? [] : {}; 
+
+    for(let key in input){
+        if (Object.prototype.hasOwnProperty.call(input, key)){
+            newInput[key] = deepClone(input[key]);
+        }
+    }
+
+    return newInput; 
+}
+
+const newUser = deepClone(user);
 
 newUser.name = "Eklavya" ; 
 newUser.age = 28 ; 
