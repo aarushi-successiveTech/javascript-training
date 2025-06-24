@@ -1,0 +1,24 @@
+{
+  "name": "javascript-training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "question2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarushi-successiveTech/javascript-training.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aarushi-successiveTech/javascript-training/issues"
+  },
+  "homepage": "https://github.com/aarushi-successiveTech/javascript-training#readme",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "lodash.flatten": "^4.4.0",
+    "save": "^2.9.0"
+  }
+}
